@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  unic:
+    build: .
+    restart: always
+    volumes:
+      - ./unifi/config:/usr/lib/unifi/data
+      - ./unifi/logs:/usr/lib/unifi/logs
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+      - "3478:3478/udp"
+      - "10001:10001/udp"
+        # network_mode: "host"
+
+
+
