@@ -12,3 +12,4 @@ RUN apt-get install unifi -y
 
 COPY ./run.sh /run.sh 
 ENTRYPOINT ["./run.sh"] 
+
